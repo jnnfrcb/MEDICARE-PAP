@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Dashboard</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">MediCare</div>
+
+        <ul class="nav-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Layanan</a></li>
+            <li><a href="#">Toko</a></li>
+            <li><a href="#">Dokter</a></li>
+            <li><a href="#">Tentang</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            <a href="#">Bantuan</a>
+            <button>Profil</button>
+        </div>
+
+    </nav>
+
+    <!-- Content -->
+    <main class="container">
+
+        <!-- Welcome -->
+        <section class="welcome">
+            <h1>Selamat datang kembali, David</h1>
+            <p>Anda hebat! Indikator kesehatan Anda stabil minggu ini.</p>
+        </section>
+
+        <!-- Top Cards -->
+        <section class="top-cards">
+
+            <div class="health-card">
+                <h3>Skor Kesehatan Keseluruhan</h3>
+
+                <div class="score-circle">
+                    <span>84</span>
+                </div>
+
+                <p>Skor Anda meningkat sebesar +3% sejak bulan lalu.</p>
+            </div>
+
+            <div class="doctor-card">
+                <div class="icon">➕</div>
+
+                <h3>Bicara dengan Dokter</h3>
+
+                <p>
+                    Mulailah konsultasi video instan dengan
+                    dokter umum dalam 5 menit.
+                </p>
+
+                <button>Pesan Sekarang</button>
+            </div>
+
+            <div class="medicine-card">
+                <div class="icon">💊</div>
+
+                <h3>Pesan Obat</h3>
+
+                <p>
+                    Isi ulang resep Anda atau telusuri
+                    produk OTC dengan pengiriman langsung.
+                </p>
+
+                <button>Pesan Online</button>
+            </div>
+
+        </section>
+
+        <!-- Middle -->
+        <section class="middle-section">
+
+            <!-- Appointment -->
+            <div class="appointment">
+
+                <div class="appointment-header">
+                    <h3>Janji Berikutnya</h3>
+                    <span>Dikonfirmasi</span>
+                </div>
+
+                <div class="doctor-info">
+
+                    <img src="https://i.pravatar.cc/100" alt="doctor">
+
+                    <div>
+                        <h4>Dr. Sarah Mitchell</h4>
+                        <p>Ahli Jantung Senior</p>
+                    </div>
+
+                </div>
+
+                <div class="appointment-footer">
+
+                    <div class="date-box">
+                        Kamis, 24 Oktober
+                    </div>
+
+                    <button class="secondary">
+                        Jadwalkan ulang
+                    </button>
+
+                    <button class="primary">
+                        Check-in
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Lab -->
+            <div class="lab-result">
+
+                <div class="lab-header">
+                    <h3>Hasil Lab Terkini</h3>
+                    <a href="#">Lihat Semua Catatan</a>
+                </div>
+
+                <div class="lab-item">
+                    <span>Glukosa Darah</span>
+                    <strong>92 mg/dL</strong>
+                </div>
+
+                <div class="lab-item">
+                    <span>Kolesterol Total</span>
+                    <strong class="danger">210 mg/dL</strong>
+                </div>
+
+                <div class="lab-item">
+                    <span>Hemoglobin</span>
+                    <strong>14.2 g/dL</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Chart -->
+        <section class="chart-section">
+
+            <div class="chart-header">
+                <div>
+                    <h3>Vital Harian</h3>
+                    <p>Rata-rata detak jantung selama 7 hari terakhir</p>
+                </div>
+
+                <div class="tabs">
+                    <button class="active">Minggu</button>
+                    <button>Bulan</button>
+                </div>
+            </div>
+
+            <div class="chart">
+                <div class="point">82 bpm</div>
+
+                <div class="days">
+                    <span>Senin</span>
+                    <span>Selasa</span>
+                    <span>Rabu</span>
+                    <span>Kamis</span>
+                    <span>Jumat</span>
+                    <span>Sabtu</span>
+                    <span>Minggu</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>MediCare</h2>
+                <p>
+                    Layanan kesehatan digital yang
+                    lebih mudah diakses, terjangkau,
+                    dan berkualitas tinggi.
+                </p>
+            </div>
+
+            <div class="footer-icons">
+                <span>📞</span>
+                <span>✉️</span>
+                <span>🔗</span>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 MediCare Sistem Kesehatan.
+            Seluruh hak dilindungi undang-undang.
+        </p>
+
+    </footer>
+
+</body>
+</html>
