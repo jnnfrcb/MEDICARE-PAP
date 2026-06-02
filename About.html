@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare - Tentang Kami</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MediCare - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="navbar">
-        <div class="nav-container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
             <div class="logo">MediCare</div>
-            <nav class="nav-links">
-                <a href="#">Dashboard</a>
-                <a href="#">Layanan</a>
-                <a href="#">Toko</a>
-                <a href="#">Dokter</a>
-                <a href="#" class="active">Tentang</a>
-            </nav>
-            <div class="search-bar">
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Toko</a></li>
+                <li><a href="#">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
             </div>
-            <div class="nav-auth">
-                <a href="#" class="btn-help">Bantuan</a>
-                <a href="#" class="btn-profile">Profil</a>
-            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
         </div>
-    </header>
+    </nav>
+    <!-- Navbar Selesai -->
 
-    <main class="container">
+<main class="container">
 
         <section class="hero-section">
             <div class="hero-content">
@@ -136,22 +143,23 @@
 
     </main>
 
-    <footer class="main-footer">
+
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="footer-top">
             <div class="footer-info">
-                <span class="footer-logo">MediCare</span>
-                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua orang.</p>
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
             </div>
             <div class="footer-socials">
-                <a href="#"><i class="fa-solid fa-phone"></i></a>
-                <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.</p>
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
         </div>
     </footer>
-
-</body>
-</html>
+    <!-- FOOTER SELESAI -->
