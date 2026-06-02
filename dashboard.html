@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare Dashboard</title>
-
-    <link rel="stylesheet" href="style2.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>MediCare - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
-
-        <div class="logo">MediCare</div>
-
-        <ul class="nav-menu">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Layanan</a></li>
-            <li><a href="#">Toko</a></li>
-            <li><a href="#">Dokter</a></li>
-            <li><a href="#">Tentang</a></li>
-        </ul>
-
-        <div class="nav-right">
-            <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
-            <a href="#">Bantuan</a>
-            <button>Profil</button>
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Toko</a></li>
+                <li><a href="#">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
         </div>
-
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
     </nav>
+    <!-- Navbar Selesai -->
 
-    <!-- Content -->
+
+<!-- Content -->
     <main class="container">
 
-        <!-- Welcome -->
+        <!-- Welcome Section -->
         <section class="welcome">
             <h1>Selamat datang kembali, David</h1>
             <p>Anda hebat! Indikator kesehatan Anda stabil minggu ini.</p>
@@ -44,90 +50,71 @@
         <!-- Top Cards -->
         <section class="top-cards">
 
+            <!-- Health Score Card -->
             <div class="health-card">
                 <h3>Skor Kesehatan Keseluruhan</h3>
-
                 <div class="score-circle">
                     <span>84</span>
                 </div>
-
-                <p>Skor Anda meningkat sebesar +3% sejak bulan lalu.</p>
+                <p>Skor Anda meningkat sebesar <span class="trend-up">+3%</span> sejak bulan lalu.</p>
             </div>
 
+            <!-- Doctor Consultation Card -->
             <div class="doctor-card">
-                <div class="icon">➕</div>
-
+                <div class="icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
                 <h3>Bicara dengan Dokter</h3>
-
-                <p>
-                    Mulailah konsultasi video instan dengan
-                    dokter umum dalam 5 menit.
-                </p>
-
+                <p>Mulailah konsultasi video instan dengan dokter umum dalam 5 menit.</p>
                 <button>Pesan Sekarang</button>
             </div>
 
+            <!-- Medicine Card -->
             <div class="medicine-card">
-                <div class="icon">💊</div>
-
+                <div class="icon">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
                 <h3>Pesan Obat</h3>
-
-                <p>
-                    Isi ulang resep Anda atau telusuri
-                    produk OTC dengan pengiriman langsung.
-                </p>
-
+                <p>Isi ulang resep Anda atau telusuri produk OTC dengan pengiriman langsung.</p>
                 <button>Pesan Online</button>
             </div>
 
         </section>
 
-        <!-- Middle -->
+        <!-- Middle Section -->
         <section class="middle-section">
 
             <!-- Appointment -->
             <div class="appointment">
-
                 <div class="appointment-header">
                     <h3>Janji Berikutnya</h3>
-                    <span>Dikonfirmasi</span>
+                    <span class="status-badge">Dikonfirmasi</span>
                 </div>
 
                 <div class="doctor-info">
-
-                    <img src="https://i.pravatar.cc/100" alt="doctor">
-
+                    <img src="https://i.pravatar.cc/100" alt="Dr. Sarah Mitchell">
                     <div>
                         <h4>Dr. Sarah Mitchell</h4>
                         <p>Ahli Jantung Senior</p>
                     </div>
-
                 </div>
 
                 <div class="appointment-footer">
-
                     <div class="date-box">
-                        Kamis, 24 Oktober
+                        <i class="fa-regular fa-calendar-days"></i> Kamis, 24 Oktober
                     </div>
-
-                    <button class="secondary">
-                        Jadwalkan ulang
-                    </button>
-
-                    <button class="primary">
-                        Check-in
-                    </button>
-
+                    <div class="action-buttons">
+                        <button class="btn secondary">Jadwalkan ulang</button>
+                        <button class="btn primary">Check-in</button>
+                    </div>
                 </div>
-
             </div>
 
-            <!-- Lab -->
+            <!-- Lab Results -->
             <div class="lab-result">
-
                 <div class="lab-header">
                     <h3>Hasil Lab Terkini</h3>
-                    <a href="#">Lihat Semua Catatan</a>
+                    <a href="#" class="view-all">Lihat Semua Catatan</a>
                 </div>
 
                 <div class="lab-item">
@@ -144,20 +131,17 @@
                     <span>Hemoglobin</span>
                     <strong>14.2 g/dL</strong>
                 </div>
-
             </div>
 
         </section>
 
-        <!-- Chart -->
+        <!-- Chart Section -->
         <section class="chart-section">
-
             <div class="chart-header">
                 <div>
                     <h3>Vital Harian</h3>
                     <p>Rata-rata detak jantung selama 7 hari terakhir</p>
                 </div>
-
                 <div class="tabs">
                     <button class="active">Minggu</button>
                     <button>Bulan</button>
@@ -165,7 +149,8 @@
             </div>
 
             <div class="chart">
-                <div class="point">82 bpm</div>
+                <!-- Anda bisa menambahkan ikon detak jantung di dekat info BPM jika perlu -->
+                <div class="point"><i class="fa-solid fa-heart-pulse"></i> 82 bpm</div>
 
                 <div class="days">
                     <span>Senin</span>
@@ -177,41 +162,26 @@
                     <span>Minggu</span>
                 </div>
             </div>
-
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-
-        <div class="footer-content">
-
-            <div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
                 <h2>MediCare</h2>
-                <p>
-                    Layanan kesehatan digital yang
-                    lebih mudah diakses, terjangkau,
-                    dan berkualitas tinggi.
-                </p>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
             </div>
-
-            <div class="footer-icons">
-                <span>📞</span>
-                <span>✉️</span>
-                <span>🔗</span>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
             </div>
-
         </div>
-
-        <hr>
-
-        <p class="copyright">
-            © 2026 MediCare Sistem Kesehatan.
-            Seluruh hak dilindungi undang-undang.
-        </p>
-
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
     </footer>
-
-</body>
-</html>
+    <!-- FOOTER SELESAI -->
