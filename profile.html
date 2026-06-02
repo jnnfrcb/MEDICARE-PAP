@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Toko</a></li>
+                <li><a href="#">Dokter</a></li>
+                <li><a href="#">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="#" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="sidebar">
+            
+            <div class="card profile-card">
+                <div class="avatar-container">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Foto Pasien" class="avatar">
+                    <button class="edit-avatar-btn"><i class="fa-solid fa-pencil"></i></button>
+                </div>
+                <h3>Nama Pasien</h3>
+                <p>ID Pasien: 00011872</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title" style="font-size: 15px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-shield-halved" style="color: var(--green-accent);"></i> Ringkasan Kesehatan
+                </div>
+                
+                <div class="health-summary-item">
+                    <i class="fa-solid fa-droplet" style="color: #ef4444;"></i>
+                    <div>
+                        <div class="health-label">Tipe Darah</div>
+                    </div>
+                    <div class="health-value">O Positif (O+)</div>
+                </div>
+
+                <div class="health-summary-item" style="border-color: var(--primary-blue);">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <div>
+                        <div class="health-label">Checkup Selanjutnya</div>
+                    </div>
+                    <div class="health-value" style="color: var(--primary-blue);">12 Okt 2025</div>
+                </div>
+
+                <div style="border: 1px solid var(--primary-blue); border-radius: 8px; padding: 12px;">
+                    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; margin-bottom: 10px;">
+                        <i class="fa-solid fa-heart-pulse" style="color: var(--primary-blue);"></i> Pemeriksaan Terakhir (15 Agustus)
+                    </div>
+                    <div class="vital-signs-container">
+                        <div class="vital-box">
+                            <span>BP</span>
+                            <strong>120/80</strong>
+                        </div>
+                        <div class="vital-box">
+                            <span>HR</span>
+                            <strong>72 bpm</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="doctor-header">
+                    <span style="font-weight: 600; font-size: 14px;">Dokter Tersimpan</span>
+                    <a href="#">Lihat Semua</a>
+                </div>
+                
+                <div class="doctor-item">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=100&auto=format&fit=crop" alt="Dr. Julian" class="doctor-img">
+                    <div class="doctor-info">
+                        <h4>Dr. Julian Reed</h4>
+                        <p>Cardiologist</p>
+                    </div>
+                    <button class="like-btn active"><i class="fa-solid fa-heart"></i></button>
+                </div>
+
+                <div class="doctor-item">
+                    <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?q=80&w=100&auto=format&fit=crop" alt="Dr. Sarah" class="doctor-img">
+                    <div class="doctor-info">
+                        <h4>Dr. Sarah Chen</h4>
+                        <p>Pediatrician</p>
+                    </div>
+                    <button class="like-btn active"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-content">
+            
+            <div class="card">
+                <div class="med-record-header">
+                    <h3 style="font-size: 18px; font-weight: 600;">Riwayat Rekam Medis</h3>
+                    <button class="btn-upload"><i class="fa-solid fa-plus"></i> Unggah Catatan</button>
+                </div>
+                
+                <table class="med-table">
+                    <thead>
+                        <tr>
+                            <th>Tipe</th>
+                            <th>Deskripsi</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                            <th>Tindakan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#" class="text-link">Hasil Lab</a></td>
+                            <td>
+                                <strong>Hitung Darah Lengkap</strong>
+                                <span class="hospital-name">Rumah Sakit Umum</span>
+                            </td>
+                            <td>15 Agustus 2026</td>
+                            <td><span class="badge normal">Normal</span></td>
+                            <td><a href="#" class="text-link">Unduh</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="text-link">Hasil Lab</a></td>
+                            <td>
+                                <strong>Hitung Darah Lengkap</strong>
+                                <span class="hospital-name">Rumah Sakit Umum</span>
+                            </td>
+                            <td>15 Agustus 2026</td>
+                            <td><span class="badge completed">Completed</span></td>
+                            <td><a href="#" class="text-link">Unduh</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="section-title">Pengaturan & Preferensi</h2>
+
+            <div class="grid-two-col">
+                
+                <div class="card">
+                    <div class="setting-box-title">
+                        <div class="icon-box-green"><i class="fa-regular fa-bell"></i></div>
+                        <span>Notifikasi</span>
+                    </div>
+                    
+                    <div class="setting-row">
+                        <span>Pengingat Janji Temu</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Peringatan Resep</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Tips & Berita Kesehatan</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="setting-box-title">
+                        <div class="icon-box-green"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span>Keamanan</span>
+                    </div>
+
+                    <a href="#" class="security-link">
+                        <div>
+                            <i class="fa-solid fa-asterisk" style="font-size: 10px;"></i>
+                            <span>Ganti Kata Sandi</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a href="#" class="security-link">
+                        <div>
+                            <i class="fa-solid fa-fingerprint"></i>
+                            <span>Masuk Biometrik</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a href="#" class="security-link">
+                        <div>
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>Sesi Aktif</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="setting-box-title">
+                    <div class="icon-box-green"><i class="fa-solid fa-sliders"></i></div>
+                    <span>Preferensi Aplikasi</span>
+                </div>
+                
+                <div class="pref-grid">
+                    <div>
+                        <span class="pref-label">Bahasa</span>
+                        <select class="select-lang">
+                            <option>Indonesian (Bahasa Indonesia)</option>
+                            <option>English (English)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="pref-label">Tema</span>
+                        <div class="theme-options">
+                            <button class="theme-btn active">
+                                <i class="fa-regular fa-sun"></i> Light
+                            </button>
+                            <button class="theme-btn">
+                                <i class="fa-regular fa-moon"></i> Dark
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+</html>
