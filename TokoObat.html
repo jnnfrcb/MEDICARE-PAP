@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Toko Obat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="FiturTokoObat.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Konsultasi.html">Layanan</a></li>
+                <li><a href="TokoObat.html" class="active">Toko</a></li>
+                <li><a href="JadwalDokter.html">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <!-- TATA LETAK UTAMA (Dua Kolom) -->
+    <div class="main-store-container">
+
+        <!-- KOLOM KIRI: SIDEBAR KATEGORI & LIVE BANTUAN -->
+        <aside class="store-sidebar">
+            <div class="category-block">
+                <h3>KATEGORI</h3>
+                <ul class="category-list">
+                    <li class="active"><span class="icon">💊</span> Obat</li>
+                    <li><span class="icon">🧬</span> Vitamin</li>
+                    <li><span class="icon">🧴</span> Perawatan Kulit</li>
+                    <li><span class="icon">🛡️</span> Alat Medis</li>
+                    <li><span class="icon">🍼</span> Perawatan Bayi</li>
+                </ul>
+            </div>
+
+            <!-- Card Bantuan CTA Pojok Kiri Bawah -->
+            <div class="help-cta-card">
+                <h4>Butuh bantuan?</h4>
+                <p>Apoteker kami tersedia 24/7 untuk konsultasi.</p>
+                <button class="btn-chat-now">Chat Sekarang</button>
+            </div>
+        </aside>
+
+        <!-- KOLOM KANAN: BANNER, FILTER, & GRID PRODUK -->
+        <main class="store-content">
+
+            <!-- Hero Banner Penjualan Kesehatan -->
+            <div class="promo-banner">
+                <div class="banner-overlay-text">
+                    <span class="badge-seasonal">Penawaran Musiman</span>
+                    <h2>Penjualan Kesehatan</h2>
+                    <p>Tingkatkan imunitas Anda musim ini. Dapatkan diskon hingga 40% untuk semua vitamin penting dan
+                        obat flu.</p>
+                    <button class="btn-shop-sale">Belanja Penjualan</button>
+                </div>
+            </div>
+
+            <!-- Bar Filter Jenis Obat & Sorting -->
+            <div class="filter-sort-bar">
+                <div class="type-filters">
+                    <button class="filter-bubble active">Semua Obat</button>
+                    <button class="filter-bubble">Resep</button>
+                    <button class="filter-bubble">Obat Bebas Resep</button>
+                    <button class="filter-bubble">Herbal</button>
+                </div>
+                <div class="sort-wrapper">
+                    <span>Urutkan Berdasarkan:</span>
+                    <select class="sort-select">
+                        <option>Rekomendasi</option>
+                        <option>Harga Terendah</option>
+                        <option>Harga Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- GRID PRODUK OBAT (4 Kolom Semetris) -->
+            <div class="products-grid">
+
+                <!-- Produk 1: Vit-C -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <span class="ribbon-badge best">BEST SELLER</span>
+                        <img src="gambar/VitC.jpg" alt="Vit-C 500mg" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.9 <span class="review-count">(1,2 ribu ulasan)</span></div>
+                        <h4 class="prod-title">Vit-C 500mg</h4>
+                        <p class="prod-desc">Vitamin C untuk dukungan kekebalan tubuh sehari-hari.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price">Rp 85.000</span>
+                                <span class="current-price">Rp 68.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2: Alat Tensi -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <span class="ribbon-badge sale">SALE -15%</span>
+                        <img src="gambar/AlatTensi.jpg" alt="Alat Tensi Digital" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.8 <span class="review-count">(450 ulasan)</span></div>
+                        <h4 class="prod-title">Alat Tensi Digital</h4>
+                        <p class="prod-desc">Monitor tekanan darah digital otomatis dengan jantung.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price">Rp 520.000</span>
+                                <span class="current-price">Rp 442.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3: Hot in Cream -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <img src="gambar/HotInCream.jpg" alt="Hot in Cream" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.7 <span class="review-count">(890 ulasan)</span></div>
+                        <h4 class="prod-title">Hot in Cream</h4>
+                        <p class="prod-desc">Krim pereda nyeri otot dan pegal-pegal dengan sensasi hangat.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 125.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 4: Oskadon -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <img src="gambar/Oskadon.jpg" alt="Oskadon" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.6 <span class="review-count">(2,1 ribu ulasan)</span></div>
+                        <h4 class="prod-title">Oskadon</h4>
+                        <p class="prod-desc">Meredakan nyeri seperti sakit kepala, sakit gigi, serta menurunkan demam.
+                        </p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 45.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 5: Inhaler (Prescription) -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <span class="ribbon-badge rx">PRESCRIPTION ONLY</span>
+                        <img src="gambar/Inhaler.jpg" alt="Inhaler" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.9 <span class="review-count">(340 ulasan)</span></div>
+                        <h4 class="prod-title">Inhaler</h4>
+                        <p class="prod-desc">Meredakan gejala sesak napas dan asma secara efektif.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 210.000</span>
+                            </div>
+                            <button class="btn-cart-add rx-req">📄</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 6: Sirup Anak -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <img src="gambar/SirupAnak.jpg" alt="Sirup batuk Anak" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.5 <span class="review-count">(112 ulasan)</span></div>
+                        <h4 class="prod-title">Sirup batuk Anak</h4>
+                        <p class="prod-desc">Mengatasi gejala flu dll pada anak.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 89.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 7: Masker -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <img src="gambar/Masker.jpg" alt="Masker 50Pcs" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.8 <span class="review-count">(3.5k reviews)</span></div>
+                        <h4 class="prod-title">Masker 50Pcs</h4>
+                        <p class="prod-desc">Paket berisi 50 masker bedah sekali pakai dengan filtrasi tinggi.</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 35.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 8: Termometer -->
+                <div class="product-card">
+                    <div class="image-wrapper">
+                        <img src="gambar/Termometer.jpg" alt="Termometer" class="prod-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="prod-rating">★ 4.6 <span class="review-count">(620 reviews)</span></div>
+                        <h4 class="prod-title">Termometer</h4>
+                        <p class="prod-desc">Termometer digital untuk pengukuran cepat dan akurat</p>
+                        <div class="price-action-row">
+                            <div class="price-block">
+                                <span class="old-price"></span>
+                                <span class="current-price">Rp 285.000</span>
+                            </div>
+                            <button class="btn-cart-add">🛒</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PAGINATION BAR BAHAW -->
+            <div class="pagination">
+                <button class="page-arrow">&lt;</button>
+                <button class="page-num active">1</button>
+                <button class="page-num">2</button>
+                <button class="page-num">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-num">12</button>
+                <button class="page-arrow">&gt;</button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FOOTER UTAMA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+
+</html>
