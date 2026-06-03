@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediCare - Artikel</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="FiturArtikel.css">
+    </head>
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Konsultasi.html" class="active">Layanan</a></li>
+                <li><a href="TokoObat.html" class="active">Toko</a></li>
+                <li><a href="JadwalDokter.html">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <section class="hero-banner">
+            <img src="gambar/TesLab.jpg" alt="Laboratory Background" class="hero-bg-img">
+
+            <div class="hero-content">
+                <span class="badge-promo">🧪 Koleksi Sampel Rumah Tersedia</span>
+                <h1>Tes Laboratorium Profesional Sesuai Kenyamanan Anda</h1>
+                <p>Dapatkan hasil diagnostik akurat dari laboratorium bersertifikat. Pesan paket hari ini dan pilih
+                    antara kunjungan ke rumah sakit atau layanan pengambilan sampel di rumah premium kami.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-hero-primary">Pesan Tes dari Rumah &rarr;</a>
+                    <a href="#" class="btn-hero-primary">Lihat Semua Paket</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendation-section">
+            <div class="section-header">
+                <div class="header-title">
+                    <h2>Paket Penayangan yang Direkomendasikan</h2>
+                    <p>Pemeriksaan kesehatan preventif yang disesuaikan dengan kebutuhan spesifik Anda.</p>
+                </div>
+                <div class="slider-arrows">
+                    <button class="arrow-btn">&lt;</button>
+                    <button class="arrow-btn">&gt;</button>
+                </div>
+            </div>
+
+            <div class="package-grid">
+                <div class="package-card card-featured">
+                    <div class="card-body">
+                        <div class="card-left-info">
+                            <span class="badge-populer">PALING POPULER</span>
+                            <h3>Tes Darah</h3>
+                            <p class="pack-desc">Evaluasi komprehensif terhadap kesehatan Anda secara keseluruhan,
+                                mendeteksi kondisi seperti anemia, infeksi, dan leukemia. Termasuk Hemoglobin, RBC, WBC,
+                                dan Trombosit.</p>
+                            <div class="meta-row">
+                                <div class="meta-col">
+                                    <strong>Perkiraan Hasil</strong>
+                                    <span>6-8 Jam</span>
+                                </div>
+                                <div class="meta-col">
+                                    <strong>Jenis Sampel</strong>
+                                    <span>Darah</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-right-img">
+                            <img src="gambar/TesDarah.jpg" alt="Blood Tube" class="card-img">
+                        </div>
+                    </div>
+                    <div class="card-footer-action">
+                        <span class="price">Rp 600.000</span>
+                        <button class="btn-book-outline">Book Test</button>
+                    </div>
+                </div>
+
+                <div class="package-card normal-card">
+                    <div class="card-top-thumb text-center">
+                        <img src="gambar/DiabetesScreening.jpg" alt="Blood Tube" class="card-img">
+                    </div>
+                    <div class="normal-card-content">
+                        <h3>Diabetes Screening</h3>
+                        <p>Tes HbA1c dan Tes Glukosa untuk memantau kadar gula darah Anda secara efektif.</p>
+                        <div class="card-bottom-action">
+                            <span class="price">Rp 500.000</span>
+                            <button class="btn-book-outline">Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card normal-card">
+                    <div class="card-top-thumb text-center">
+                        <img src="gambar/KesehatanJantung.jpg" alt="Blood Tube" class="card-img">
+                    </div>
+                    <div class="normal-card-content">
+                        <h3>Kesehatan Jantung</h3>
+                        <p>Profil lipid yang mengukur Kolesterol (HDL, LDL) dan Trigliserida.</p>
+                        <div class="card-bottom-action">
+                            <span class="price">Rp 1.000.000</span>
+                            <button class="btn-book-outline">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-service-section">
+            <div class="home-service-left">
+                <h2>Layanan Rumah MediCare</h2>
+                <p class="subtitle">Lewati antrean dan perjalanan. Para profesional kesehatan bersertifikat kami akan
+                    datang ke tempat Anda, memastikan proses pengambilan sampel yang aman dan nyaman di privasi rumah
+                    Anda.</p>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="icon-check">✓</span>
+                        <div>
+                            <h4>Ahli Phlebotomi Bersertifikat</h4>
+                            <p>Staf yang terlatih dengan baik dan mengikuti protokol kebersihan yang ketat.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon-check">🔄</span>
+                        <div>
+                            <h4>Hasil Digital di Hari yang Sama</h4>
+                            <p>Akses laporan Anda langsung melalui aplikasi atau portal VitalCare.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon-check">🛡️</span>
+                        <div>
+                            <h4>Privasi Terjamin</h4>
+                            <p>Data medis Anda dienkripsi dan ditangani dengan kerahasiaan penuh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-service-right">
+                <div class="service-image-box">
+                    <img src="gambar/tenkess.jpg" alt="Foto Tas Medis / Tenaga Kesehatan">
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="map-header">
+                <h2>Temukan Laboratorium Terdekat di Lokasi Anda</h2>
+                <p>Lebih suka mengunjungi kami? Kami memiliki lebih dari 50 laboratorium mitra terakreditasi di seluruh
+                    negeri.</p>
+            </div>
+
+            <div class="map-workspace">
+                <div class="location-sidebar">
+                    <div class="location-card active-location">
+                        <h4>Laboratorium Pusat MediCare</h4>
+                        <p>123 Health Blvd, Pusat Kota</p>
+                        <span class="status-open">🕒 Buka 24/7</span>
+                    </div>
+                    <div class="location-card">
+                        <h4>Diagnostik Distrik Utara</h4>
+                        <p>Jalan Taman Medis 45</p>
+                        <span class="status-time">08:00 - 21:00</span>
+                    </div>
+                    <div class="location-card">
+                        <h4>Pusat Kebugaran Sisi Timur</h4>
+                        <p>88 Heritage Square</p>
+                        <span class="status-time">07:30 - 20:00</span>
+                    </div>
+                </div>
+
+                <div class="map-view-placeholder">
+                    <img src="gambar/gmaps.jpg" alt="Peta Lokasi" class="map-bg-img">
+                    <div class="map-actions-overlay">
+                        <button class="btn-direction-detail">Dapatkan Petunjuk Arah</button>
+                        <button class="btn-direction-detail">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER UTAMA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+
+</html>
