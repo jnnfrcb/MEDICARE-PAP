@@ -1,0 +1,760 @@
+:root {
+    --primary-blue: #0955A1;
+    --text-dark: #0B1C30;
+    --text-muted: #949597;
+    --green-accent: #65B32C;
+    --green-hover: #65B32C;
+    --green-light: #e8f5e9;
+    --border-color: #0955A1;
+    --card-bg: #FDFFFE;
+    --bg-light: #ECF5FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR & FOOTER */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--card-bg);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 38px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.btn-bantuan {
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-profil {
+    background-color: var(--green-accent);
+    color: var(--card-bg);
+    padding: 6px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-profil:hover {
+    background-color: #62a31f;
+    color: var(--card-bg);
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 40px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   MAIN WORKSPACE CONTAINER
+   ========================================================================== */
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* --- SECTION 1: HERO BANNER --- */
+.hero-banner {
+    border-radius: 16px;
+    padding: 50px;
+    margin-bottom: 40px;
+    position: relative;
+    /* Wajib ada sebagai acuan posisi gambar dan overlay */
+    overflow: hidden;
+    /* Memastikan gambar tidak keluar dari border-radius */
+}
+
+/* 1. Mengatur Gambar HTML agar Berperilaku seperti Background */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Membuat gambar proporsional memenuhi kontainer */
+    object-position: center;
+    z-index: 1;
+    /* Berada di lapisan paling bawah */
+}
+
+/* 2. Lapisan Warna/Gradien (Overlay) di atas gambar agar teks terbaca jelas */
+/* Lapisan Warna/Gradien (Overlay) dibuat lebih tipis agar gambar asli lebih tebal */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mengubah opacity dari 0.9/0.85 menjadi 0.5 / 0.4 */
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.5) 0%, rgba(186, 230, 253, 0.4) 100%);
+    z-index: 2;
+}
+
+/* 3. Mengatur Konten Utama */
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 3;
+    /* Berada di lapisan paling atas agar bisa dibaca & tombol bisa diklik */
+}
+
+.badge-promo {
+    background-color: #74b72e;
+    color: var(--card-bg);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b2545;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-hero-primary {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hero-primary:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+}
+
+/* --- SECTION 2: RECOMMENDATIONS --- */
+.recommendation-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.header-title h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2545;
+}
+
+.header-title p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.arrow-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-btn:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    border: 1px solid var(--text-dark);
+}
+
+/* Grid Susunan Paket */
+.package-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.package-card {
+    background: var(--card-bg);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+/* Mengincar gambar di dalam bagian kanan kartu paket */
+.package-card .card-img {
+    width: 200px;
+    /* Ubah angka ini (misal: 100px, 120px, 140px) untuk mengatur besar kecilnya */
+    height: auto;
+    /* Tetap auto agar gambar tidak gepeng */
+    object-fit: contain;
+}
+
+
+
+/* Card Utama Terlebar */
+.card-featured {
+    grid-column: span 1;
+    padding: 24px;
+}
+
+.card-body {
+    display: flex;
+    gap: 16px;
+}
+
+.card-left-info {
+    flex: 2;
+}
+
+.badge-populer {
+    background-color: #1e3a8a;
+    color: var(--card-bg);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.card-featured h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.pack-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.meta-row {
+    display: flex;
+    gap: 24px;
+}
+
+.meta-col strong {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.meta-col span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-right-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blood-tube-placeholder {
+    font-size: 50px;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.card-footer-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #e2e8f0;
+    margin-top: 20px;
+    padding-top: 16px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Card Normal Standar */
+.normal-card {
+    padding: 0;
+}
+
+.card-top-thumb {
+    background-color: #f8fafc;
+    font-size: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.normal-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.normal-card-content h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.normal-card-content p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.card-bottom-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.card-bottom-action .price {
+    font-size: 15px;
+}
+
+.btn-book-outline {
+    background: transparent;
+    color: #0076ec;
+    border: 1px solid #0076ec;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-book-outline:hover {
+    color: var(--bg-light);
+    background-color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+}
+
+/* --- SECTION 3: HOME SERVICE --- */
+.home-service-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 20px 0;
+}
+
+.home-service-left {
+    flex: 1;
+}
+
+.home-service-left h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b2545;
+    margin-bottom: 10px;
+}
+
+.home-service-left .subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.feature-item .icon-check {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.feature-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.feature-item p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.home-service-right {
+    flex: 1;
+}
+
+/* === BAGIAN YANG DIPERBAIKI === */
+.service-image-box {
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    /* Mengubah border dashed menjadi solid agar lebih rapi saat diisi gambar */
+    border-radius: 16px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* CRITICAL: Memotong ujung gambar agar mengikuti border-radius box */
+}
+
+/* Tambahkan selektor baru ini untuk mengatur gambar di dalamnya */
+.service-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Membikin gambar proporsional memenuhi box tanpa distorsi/gepeng */
+    object-position: center;
+    /* Memastikan fokus gambar tetap di tengah */
+}
+
+/* --- SECTION 4: MAPS LAB --- */
+.map-section {
+    margin-bottom: 40px;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.map-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2545;
+}
+
+.map-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.map-workspace {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+}
+
+/* Sidebar List Cabang */
+.location-sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-card {
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+}
+
+.location-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.location-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 2px 0 6px;
+}
+
+.status-open {
+    font-size: 11px;
+    font-weight: 600;
+    color: #16a34a;
+}
+
+.status-time {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.active-location {
+    background-color: #eff6ff;
+    border-left: 4px solid var(--btn-blue);
+}
+
+/* Tampilan Peta Palsu */
+.map-view-placeholder {
+    flex: 2;
+    background-color: #e2e8f0;
+    /* Tetap sebagai fallback jika gambar gagal dimuat */
+    position: relative;
+    overflow: hidden;
+    /* Memastikan peta tidak meluber keluar dari border kontainer */
+}
+
+/* Membuat gambar HTML menjadi background penuh */
+.map-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Gambar peta otomatis pas dengan ukuran box tanpa gepeng */
+    object-position: center;
+    z-index: 1;
+    /* Lapisan paling bawah */
+}
+
+/* Pastikan semua pin koordinat berada DI ATAS gambar peta */
+.map-pin {
+    position: absolute;
+    /* Pastikan posisi pin kamu sudah absolute */
+    z-index: 2;
+    /* Naik ke lapisan atas agar tidak tertutup peta */
+}
+
+/* Pastikan tombol overlay juga berada DI ATAS gambar peta */
+.map-actions-overlay {
+    position: absolute;
+    /* Pastikan posisi overlay kamu sudah absolute */
+    z-index: 2;
+    /* Naik ke lapisan atas agar bisa dilihat dan diklik */
+}
+
+.pin1 {
+    top: 30%;
+    left: 40%;
+}
+
+.pin2 {
+    top: 50%;
+    left: 25%;
+}
+
+.pin3 {
+    top: 20%;
+    left: 70%;
+}
+
+.pin4 {
+    top: 70%;
+    left: 60%;
+}
+
+.pin5 {
+    top: 65%;
+    left: 80%;
+}
+
+.map-actions-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-direction-detail {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-direction-detail:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    border: 1px solid var(--text-dark);
+}
