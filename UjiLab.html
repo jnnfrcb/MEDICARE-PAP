@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediCare - Uji Lab</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="FiturUjiLab.css">
+    </head>
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Konsultasi.html">Layanan</a></li>
+                <li><a href="TokoObat.html">Toko</a></li>
+                <li><a href="JadwalDokter.html">Dokter</a></li>
+                <li><a href="About.html" class="active">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <!-- CONTENT CONTAINER -->
+    <div class="main-container">
+
+        <!-- HERO BANNER (ARTIKEL UTAMA) -->
+        <header class="hero-article">
+            <img src="gambar/rumah.jpg" alt="Gut Brain Connection" class="hero-article-bg">
+
+            <div class="hero-overlay-content">
+                <span class="badge badge-nutrisi">Nutrisi & Sains</span>
+                <h1>Dampak Mikrobioma Usus terhadap Kesehatan Mental Modern</h1>
+                <p>Penelitian terbaru mengungkapkan bagaimana sistem pencernaan berkomunikasi langsung dengan otak,
+                    mempengaruhi suasana hati, tingkat kecemasan, dan kinerja kognitif.</p>
+                <div class="author-meta">
+                    <span>👤 Dr. Sarah Jenkins, PhD</span>
+                    <span>🕒 Waktu baca 12 menit</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- KATEGORI FILTER TABS -->
+        <div class="category-tabs">
+            <button class="tab-btn active">All Articles</button>
+            <button class="tab-btn">Nutrition</button>
+            <button class="tab-btn">Wellness</button>
+            <button class="tab-btn">Mental Health</button>
+            <button class="tab-btn">Fitness</button>
+            <button class="tab-btn">Medical Tech</button>
+        </div>
+
+        <!-- BARIS ARTIKEL KECIL (3 KOLOM GRID) -->
+        <section class="article-grid-triple">
+            <!-- Kartu 1: Ritual Pagi -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-yoga">
+                    <span class="badge badge-kesehatan">Kesehatan</span>
+
+                    <img src="gambar/yoga.jpg" alt="Yoga" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Ritual Pagi untuk Energi Berkelanjutan</h3>
+                    <p>Di luar kafein: Strategi ilmiah untuk menyelaraskan ritme sirkadian Anda demi performa puncak.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Dr. Michael Chen</span>
+                    <span>5 menit membaca</span>
+                </div>
+            </div>
+
+            <!-- Kartu 2: Makanan Super Anti-Inflamasi -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-salad">
+                    <span class="badge badge-nutrisi">Nutrisi</span>
+
+                    <img src="gambar/sehat.jpg" alt="Healthy Salad" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Makanan Super Anti-Inflamasi: Sebuah Panduan</h3>
+                    <p>Memahami biologi peradangan kronis dan bagaimana piring Anda bertindak sebagai obat pertama Anda.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Ahli Gizi Terdaftar Anita Rao</span>
+                    <span>8 menit membaca</span>
+                </div>
+            </div>
+
+            <!-- Kartu 3: Mengatasi Kecemasan -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-forest">
+                    <span class="badge badge-mental">Kesehatan Mental</span>
+
+                    <img src="gambar/mental.jpg" alt="Forest" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Mengatasi Kecemasan di Era Digital</h3>
+                    <p>Kerangka kerja psikologis untuk mengelola stres akibat layar dan menetapkan batasan yang sehat.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Dr. Elena Foster</span>
+                    <span>10 menit membaca</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BARIS ARTIKEL TENGAH (2 KOLOM GRID ASIMETRIS) -->
+        <section class="article-grid-double">
+            <!-- Kiri: Artikel Lebar VO2 Max -->
+            <div class="horizontal-wide-card">
+                <div class="wide-card-img">
+                    <img src="gambar/lari.jpg" alt="Fitness Gym" class="wide-bg-img">
+                </div>
+                <div class="wide-card-info">
+                    <span class="badge badge-kebugaran">Kebugaran</span>
+                    <h3>Ilmu Pengetahuan tentang VO2 Max dan Umur Panjang</h3>
+                    <p>Temukan mengapa kebugaran kardiovaskular adalah biomarker terpenting untuk memprediksi rentang
+                        kesehatan jangka panjang dan bagaimana meningkatkannya secara efektif.</p>
+                    <div class="author-profile-row">
+                        <span class="avatar-circle">👨‍⚕️</span>
+                        <div>
+                            <strong>Dr. James Wilson</strong>
+                            <p>Kepala Kedokteran Olahraga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Artikel Info Wearable Tech -->
+            <div class="text-info-card">
+                <div class="icon-header-red">🔬</div>
+                <h3>Teknologi yang Dapat Dipakai: Akurasi vs. Kegunaan</h3>
+                <p>Apakah metrik pelacakan tidur Anda benar-benar dapat diandalkan? Perbandingan klinis perangkat
+                    konsumen teratas.</p>
+                <a href="#" class="link-dive-deep">Baca Menyelam Lebih Dalam <span class="arrow">&rarr;</span></a>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER SUBSCRIBE BANNER -->
+        <section class="newsletter-banner">
+            <div class="newsletter-text">
+                <h2>Tetap Terinformasi dengan Artikel MediCare</h2>
+                <p>Dapatkan wawasan tingkat medis dan kiat kesehatan yang dikirimkan ke kotak masuk Anda setiap Selasa.
+                </p>
+            </div>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Masukkan alamat email Anda" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- FOOTER UTAMA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+
+</html>
