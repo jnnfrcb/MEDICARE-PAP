@@ -1,0 +1,729 @@
+:root {
+    --primary-blue: #0955A1;
+    --text-dark: #0B1C30;
+    --text-muted: #949597;
+    --green-accent: #65B32C;
+    --green-hover: #65B32C;
+    --green-light: #e8f5e9;
+    --border-color: #0955A1;
+    --card-bg: #FDFFFE;
+    --bg-light: #ECF5FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR & FOOTER */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--card-bg);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 38px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.btn-bantuan {
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-profil {
+    background-color: var(--green-accent);
+    color: var(--card-bg);
+    padding: 6px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-profil:hover {
+    background-color: #62a31f;
+    color: var(--bg-light);
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 40px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   MAIN CONTAINERS WORKSPACE
+   ========================================================================== */
+.main-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+}
+
+/* --- BADGES STYLES --- */
+.badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.badge-nutrisi {
+    background-color: #b91c1c;
+    color: var(--card-bg);
+}
+
+.badge-kesehatan {
+    background-color: #059669;
+    color: var(--card-bg);
+}
+
+.badge-mental {
+    background-color: #0284c7;
+    color: var(--card-bg);
+}
+
+.badge-kebugaran {
+    background-color: #047857;
+    color: var(--card-bg);
+}
+
+/* --- HERO BANNER (ARTIKEL BESAR) --- */
+.hero-article {
+    background-color: #334155;
+    border-radius: 12px;
+    padding: 60px 40px;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-article-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.hero-article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(104, 31, 31, 0.35), rgba(105, 70, 70, 0.7));
+    z-index: 2;
+}
+
+/* Mengatur Konten Teks */
+.hero-overlay-content {
+    max-width: 600px;
+    color: var(--card-bg);
+    position: relative;
+    z-index: 3;
+}
+
+.hero-overlay-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 14px 0 10px;
+}
+
+.hero-overlay-content p {
+    font-size: 13px;
+    color: var(--card-bg);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.author-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+/* --- CATEGORY TABS BUTTONS --- */
+.category-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.tab-btn {
+    background-color: var(--card-bg);
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    border-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   GRID ARTIKEL 1: TRIPLE CARD ROW
+   ========================================================================== */
+.article-grid-triple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.article-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-thumb-placeholder {
+    height: 160px;
+    padding: 12px;
+    position: relative;
+    /* Wajib ada sebagai jangkar untuk posisi absolute di dalamnya */
+    overflow: hidden;
+    /* Memastikan gambar tidak meluber keluar dari lengkungan card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Atur badge agar posisinya berada di atas gambar */
+.card-thumb-placeholder .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    /* Naik ke lapisan atas */
+}
+
+/* Mengatur gambar agar memenuhi area penuh .thumb-yoga */
+.card-thumb-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Membuat gambar memenuhi kotak secara penuh dan proporsional */
+    object-position: center;
+    z-index: 1;
+    /* Berada di bawah badge, tapi menutup warna background asli */
+}
+
+
+.emoji-placeholder {
+    font-size: 50px;
+    opacity: 0.8;
+}
+
+/* Simulasi palet warna thumbnail gambar aslinya */
+.thumb-yoga {
+    background-color: #fef08a;
+}
+
+.thumb-salad {
+    background-color: #fed7aa;
+}
+
+.thumb-forest {
+    background-color: #ccfbf1;
+}
+
+.card-body {
+    padding: 16px;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    font-size: 11px;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.card-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   GRID ARTIKEL 2: DOUBLE CARD ROW (ASIMETRIS)
+   ========================================================================== */
+.article-grid-double {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.horizontal-wide-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+}
+
+.wide-card-img {
+    flex: 1;
+    background-color: #1e293b;
+    position: relative;
+    min-height: 200px;
+}
+
+.wide-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wide-card-info {
+    flex: 1.2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wide-card-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 12px 0 8px;
+    line-height: 1.3;
+}
+
+.wide-card-info p {
+    font-size: 11px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.author-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 1px solid var(--bg-light);
+}
+
+.author-profile-row strong {
+    font-size: 12px;
+    color: var(--text-dark);
+    display: block;
+}
+
+.author-profile-row p {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Sisi Kanan: Kotak Informasi Teks Putih Bergaris Merah */
+.text-info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon-header-red {
+    font-size: 26px;
+    color: #dc2626;
+    margin-bottom: 10px;
+}
+
+.text-info-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.text-info-card p {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 10px 0 20px;
+}
+
+.link-dive-deep {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+/* ==========================================================================
+   NEWSLETTER BANNER
+   ========================================================================== */
+.newsletter-banner {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.newsletter-text h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.newsletter-text p {
+    font-size: 12px;
+    color: #475569;
+    margin-top: 2px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    outline: none;
+}
+
+.btn-subscribe {
+    background-color: var(--card-bg);
+    /* Tombol Merah Tebal Sesuai Gambar */
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-subscribe:hover {
+    color: var(--card-bg);
+    background-color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+}
+
+/* NAVBAR & FOOTER */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--card-bg);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 38px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.btn-bantuan {
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 40px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
