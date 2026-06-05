@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare - Dashboard</title>
+    <title>MediCare - Tentang Kami</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,16 +14,15 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo">MediCare</div>
             <ul class="nav-links">
                 <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="#">Layanan</a></li>
-                <li><a href="#">Toko</a></li>
-                <li><a href="#">Dokter</a></li>
-                <li><a href="About.html">Tentang</a></li>
+                <li><a href="Konsultasi.html">Layanan</a></li>
+                <li><a href="TokoObat.html">Toko</a></li>
+                <li><a href="JadwalDokter.html">Dokter</a></li>
+                <li><a href="About.html" class="active">Tentang</a></li>
             </ul>
         </div>
         <div class="nav-right">
@@ -35,14 +34,14 @@
             <a href="Profile.html" class="btn-profil">Profil</a>
         </div>
     </nav>
-    <!-- Navbar Selesai -->
 
-<main class="container">
+    <main class="container">
 
         <section class="hero-section">
             <div class="hero-content">
                 <h1>Mitra Tepercaya Anda dalam Keunggulan Klinis</h1>
-                <p>Temukan perawatan medis yang tepat secara instan. Berbincanglah dengan spesialis, pesan obat-obatan, atau jadwalkan tes diagnostik dari kenyamanan rumah Anda.</p>
+                <p>Temukan perawatan medis yang tepat secara instan. Berbincanglah dengan spesialis, pesan obat-obatan,
+                    atau jadwalkan tes diagnostik dari kenyamanan rumah Anda.</p>
                 <div class="hero-actions">
                     <div class="search-input-group">
                         <i class="fa-solid fa-user-doctor"></i>
@@ -53,6 +52,8 @@
             </div>
             <div class="hero-image-container">
                 <div class="hero-illustration">
+                    <img src="gambar/Dokters.jpg" alt="Hero Illustration" class="hero-img">
+
                     <div class="illustration-badge">
                         <i class="fa-solid fa-circle-check"></i>
                         <div>
@@ -66,13 +67,14 @@
 
         <section class="promo-banner">
             <div class="promo-content">
-                <span class="badge-promo">PENAWARAN TERBATAS WAKTU</span>
+                <span class="badge-promo">Penawaran Terbatas Waktu</span>
                 <h2>Konsultasi Virtual Gratis</h2>
-                <p>Konsultasikan dengan dokter umum terbaik kami secara gratis bulan ini. Rasakan perawatan kelas dunia melalui panggilan video definisi tinggi.</p>
+                <p>Konsultasikan dengan dokter umum terbaik kami secara gratis bulan ini. Rasakan perawatan kelas dunia
+                    melalui panggilan video definisi tinggi.</p>
                 <button class="btn-secondary">Klaim Sesi Anda</button>
             </div>
             <div class="promo-icon">
-                <i class="fa-solid fa-video-slash" style="opacity: 0.1; font-size: 120px; transform: rotate(-15deg);"></i>
+                <i class="fa-solid fa-video"></i>
             </div>
         </section>
 
@@ -81,25 +83,27 @@
                 <div class="icon-wrapper icon-blue"><i class="fa-regular fa-comments"></i></div>
                 <h3>Bicara dengan Dokter</h3>
                 <p>Respons langsung dari tenaga medis bersertifikat.</p>
-                <a href="#" class="link-action">Mulai Obrolan <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="Konsultasi.html" class="link-action">Mulai Obrolan <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="service-card border-red">
                 <div class="icon-wrapper icon-red"><i class="fa-solid fa-basket-shopping"></i></div>
                 <h3>Toko Kesehatan</h3>
                 <p>Obat-obatan asli dan produk kesehatan dikirim dengan cepat.</p>
-                <a href="#" class="link-action text-red">Belanja Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="TokoObat.html" class="link-action text-red">Belanja Sekarang <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="service-card">
                 <div class="icon-wrapper icon-green"><i class="fa-regular fa-hospital"></i></div>
                 <h3>Kunjungi Rumah Sakit</h3>
                 <p>Buat janji temu di rumah sakit lokal tercanggih.</p>
-                <a href="#" class="link-action text-green">Buku Panduan <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="Artikel.html" class="link-action text-green">Buku Panduan <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="service-card">
                 <div class="icon-wrapper icon-blue-dark"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                 <h3>Uji Lab</h3>
                 <p>Pengambilan sampel di rumah yang aman dan laporan lab digital.</p>
-                <a href="#" class="link-action">Tes Pesanan <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="UjiLab.html" class="link-action">Tes Pesanan <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
 
@@ -109,7 +113,8 @@
                     <h2>Rekomendasi Untukmu</h2>
                     <p>Wawasan kesehatan yang dipersonalisasi dan disusun oleh dewan medis kami.</p>
                 </div>
-                <a href="#" class="btn-see-all">Lihat Semua Artikel <i class="fa-solid fa-chevron-right"></i></a>
+                <a href="Artikel.html" class="btn-see-all">Lihat Semua Artikel <i
+                        class="fa-solid fa-chevron-right"></i></a>
             </div>
 
             <div class="articles-layout">
@@ -126,14 +131,18 @@
 
                 <div class="side-articles">
                     <div class="side-card">
-                        <span class="category-tag text-teal">KESEHATAN MENTAL</span>
-                        <h4>Mengelola Kecemasan dalam Pekerjaan Bertekanan Tinggi</h4>
+                        <div>
+                            <span class="category-tag text-teal">Kesehatan Mental</span>
+                            <h4 style="margin-top:8px;">Mengelola Kecemasan dalam Pekerjaan Bertekanan Tinggi</h4>
+                        </div>
                         <p>Tips praktis untuk para profesional modern.</p>
                         <a href="#" class="arrow-diagonal"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                     <div class="side-card">
-                        <span class="category-tag text-orange">KEBUGARAN</span>
-                        <h4>Ilmu di Balik Kualitas Tidur yang Lebih Baik</h4>
+                        <div>
+                            <span class="category-tag text-orange">Kebugaran</span>
+                            <h4 style="margin-top:8px;">Ilmu di Balik Kualitas Tidur yang Lebih Baik</h4>
+                        </div>
                         <p>Optimalkan waktu istirahat Anda untuk performa puncak.</p>
                         <a href="#" class="arrow-diagonal"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
@@ -143,8 +152,6 @@
 
     </main>
 
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-info">
@@ -162,4 +169,7 @@
             &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
         </div>
     </footer>
-    <!-- FOOTER SELESAI -->
+
+</body>
+
+</html>
