@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediCare - Jadwal Dokter</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="FiturJadwalDokter.css">
+    </head>
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Konsultasi.html">Layanan</a></li>
+                <li><a href="TokoObat.html">Toko</a></li>
+                <li><a href="JadwalDokter.html" class="active">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="schedule-content">
+
+            <header class="page-header">
+                <div class="header-text">
+                    <h2>Jadwal Dokter</h2>
+                    <p>Kelola janji temu konsultasi Anda dengan tenaga medis profesional.</p>
+                </div>
+                <button class="btn-add-appointment"><i class="fa-solid fa-plus"></i> Buat Janji Baru</button>
+            </header>
+
+            <div class="schedule-layout-container">
+
+                <main class="calendar-section">
+                    <div class="calendar-control-bar">
+                        <div class="month-selector">
+                            <h3>Oktober 2024</h3>
+                            <div class="arrow-buttons">
+                                <button class="btn-arrow">&lt;</button>
+                                <button class="btn-arrow">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="view-switcher">
+                            <button class="switch-btn active">Kalender</button>
+                            <button class="switch-btn">Daftar</button>
+                        </div>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <div class="day-name">Min</div>
+                        <div class="day-name">Sen</div>
+                        <div class="day-name">Sel</div>
+                        <div class="day-name">Rab</div>
+                        <div class="day-name">Kam</div>
+                        <div class="day-name">Jum</div>
+                        <div class="day-name">Sab</div>
+
+                        <div class="calendar-cell outside-month"><span class="date-num">29</span></div>
+                        <div class="calendar-cell outside-month"><span class="date-num">30</span></div>
+                        <div class="calendar-cell"><span class="date-num">1</span></div>
+                        <div class="calendar-cell"><span class="date-num">2</span></div>
+                        <div class="calendar-cell"><span class="date-num">3</span></div>
+                        <div class="calendar-cell"><span class="date-num">4</span></div>
+                        <div class="calendar-cell"><span class="date-num">5</span></div>
+
+                        <div class="calendar-cell">
+                            <span class="date-num">6</span>
+                            <span class="event-tag blue-tag">Dr. Sarah (Video)</span>
+                        </div>
+                        <div class="calendar-cell"><span class="date-num">7</span></div>
+                        <div class="calendar-cell"><span class="date-num">8</span></div>
+                        <div class="calendar-cell today-cell">
+                            <span class="date-num">9</span>
+                            <span class="today-badge">Hari Ini</span>
+                        </div>
+                        <div class="calendar-cell"><span class="date-num">10</span></div>
+                        <div class="calendar-cell"><span class="date-num">11</span></div>
+                        <div class="calendar-cell"><span class="date-num">12</span></div>
+
+                        <div class="calendar-cell">
+                            <span class="date-num">13</span>
+                            <span class="event-tag green-tag">Lab Check-up</span>
+                        </div>
+                        <div class="calendar-cell"><span class="date-num">14</span></div>
+                        <div class="calendar-cell"><span class="date-num">15</span></div>
+                        <div class="calendar-cell"><span class="date-num">16</span></div>
+                        <div class="calendar-cell"><span class="date-num">17</span></div>
+                        <div class="calendar-cell"><span class="date-num">18</span></div>
+                        <div class="calendar-cell"><span class="date-num">19</span></div>
+
+                        <div class="calendar-cell"><span class="date-num">20</span></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                        <div class="calendar-cell empty-placeholder"></div>
+                    </div>
+                </main>
+
+                <aside class="details-sidebar">
+                    <div class="appointment-card">
+                        <div class="card-status-header">
+                            <span class="status-pill">Mendatang</span>
+                            <button class="btn-more-options">•••</button>
+                        </div>
+
+                        <div class="doctor-profile-row">
+                            <div class="doctor-avatar">👩‍⚕️</div>
+                            <div class="doctor-info">
+                                <h4>Dr. Sarah Wijaya</h4>
+                                <p>Spesialis Jantung & Pembuluh Darah</p>
+                            </div>
+                        </div>
+
+                        <div class="info-meta-block">
+                            <div class="meta-item">
+                                <span class="meta-icon">📅</span>
+                                <div class="meta-text">
+                                    <strong>TANGGAL & WAKTU</strong>
+                                    <p>Senin, 13 Oktober 2024 • 14:00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-icon">📹</span>
+                                <div class="meta-text">
+                                    <strong>TIPE KONSULTASI</strong>
+                                    <p>Video Call (Konsultasi Online)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="appointment-actions">
+                            <button class="btn-primary-action">📅 Ubah Jadwal</button>
+                            <button class="btn-secondary-action">Batalkan Janji Temu</button>
+                        </div>
+                    </div>
+
+                    <div class="checklist-card">
+                        <h4>Persiapan Konsultasi</h4>
+                        <div class="checklist-item done">
+                            <span class="check-icon">✓</span>
+                            <p>Cek koneksi internet stabil</p>
+                        </div>
+                        <div class="checklist-item pending">
+                            <span class="circle-icon"></span>
+                            <p>Siapkan riwayat medis terakhir</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-support-box">
+        <p>Butuh bantuan?</p>
+        <span>Apoteker kami tersedia 24/7 untuk konsultasi.</span>
+        <a href="#" class="btn-chat-now">Chat Sekarang</a>
+    </div>
+
+    <!-- FOOTER UTAMA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+
+</html>
