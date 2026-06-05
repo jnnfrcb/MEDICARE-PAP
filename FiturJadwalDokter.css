@@ -1,0 +1,612 @@
+:root {
+    --primary-blue: #0955A1;
+    --text-dark: #0B1C30;
+    --text-muted: #949597;
+    --green-accent: #65B32C;
+    --green-hover: #65B32C;
+    --green-light: #e8f5e9;
+    --border-color: #0955A1;
+    --card-bg: #FDFFFE;
+    --bg-light: #ECF5FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR & FOOTER */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--card-bg);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 38px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.btn-bantuan {
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-profil {
+    background-color: var(--green-accent);
+    color: var(--card-bg);
+    padding: 6px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-profil:hover {
+    background-color: #62a31f;
+    color: #ffffff !important;
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 40px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   MAIN CONTAINERS (Grid & Alignment standard Toko Obat)
+   ========================================================================== */
+.main-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-content {
+    width: 100%;
+}
+
+/* Header Section */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.header-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b2545;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.btn-add-appointment {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-add-appointment:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+}
+
+/* Layout Workspace */
+.schedule-layout-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   KALENDER SISTEM STYLE
+   ========================================================================== */
+.calendar-section {
+    flex: 2;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.calendar-control-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.month-selector h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.arrow-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-arrow {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-switcher {
+    background-color: #f1f5f9;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.switch-btn {
+    border: none;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-muted);
+}
+
+.switch-btn:hover {
+    color: var(--text-dark);
+}
+
+.switch-btn.active {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+/* Grid Kalender */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #cbd5e1;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.day-name {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+    padding: 10px 0;
+}
+
+.calendar-cell {
+    background-color: #ffffff;
+    height: 100px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date-num {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.outside-month {
+    background-color: #f8fafc;
+}
+
+.outside-month .date-num {
+    color: #94a3b8;
+}
+
+/* Event tags */
+.event-tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+}
+
+.blue-tag {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border-left: 3px solid #0284c7;
+}
+
+.green-tag {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-left: 3px solid #16a34a;
+}
+
+/* Hari Ini (Batas Merah Sesuai Mockup) */
+.today-cell {
+    border: 2px solid #b91c1c !important;
+    background-color: #eff6ff;
+}
+
+.today-badge {
+    background-color: #0f172a;
+    color: var(--card-bg);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   DETAIL SIDEBAR (KANAN)
+   ========================================================================== */
+.details-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.appointment-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid #0076ec;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.card-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.status-pill {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.btn-more-options {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.doctor-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.doctor-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.doctor-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.doctor-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.info-meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.meta-text strong {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.meta-text p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.appointment-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primary-action {
+    background-color: var(--btn-blue);
+    color: var(--text-dark);
+    border: 1px solid var(--primary-blue);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary-action:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary-action {
+    background-color: var(--btn-blue);
+    color: var(--text-dark);
+    border: 1px solid var(--primary-blue);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary-action:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+/* Checklist Persiapan */
+.checklist-card {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.checklist-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 14px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.checklist-item p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.check-icon {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.circle-icon {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--text-dark);
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   FLOATING SUPPORT WIDGET (Sama dengan Toko Obat)
+   ========================================================================== */
+.floating-support-box {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 240px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.floating-support-box p {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.floating-support-box span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-chat-now {
+    display: block;
+    background-color: var(--card-bg);
+    color: var(--primary-blue);
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
