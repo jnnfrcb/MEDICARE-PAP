@@ -6,13 +6,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MediCare - Artikel</title>
+        <title>MediCare - Uji Lab</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="FiturArtikel.css">
+        <link rel="stylesheet" href="FiturUjiLab.css">
     </head>
 </head>
 
@@ -24,10 +24,10 @@
             <div class="logo">MediCare</div>
             <ul class="nav-links">
                 <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="Konsultasi.html" class="active">Layanan</a></li>
-                <li><a href="TokoObat.html" class="active">Toko</a></li>
+                <li><a href="Konsultasi.html">Layanan</a></li>
+                <li><a href="TokoObat.html">Toko</a></li>
                 <li><a href="JadwalDokter.html">Dokter</a></li>
-                <li><a href="About.html">Tentang</a></li>
+                <li><a href="About.html" class="active">Tentang</a></li>
             </ul>
         </div>
         <div class="nav-right">
@@ -40,167 +40,135 @@
         </div>
     </nav>
 
+    <!-- CONTENT CONTAINER -->
     <div class="main-container">
 
-        <section class="hero-banner">
-            <img src="gambar/TesLab.jpg" alt="Laboratory Background" class="hero-bg-img">
+        <!-- HERO BANNER (ARTIKEL UTAMA) -->
+        <header class="hero-article">
+            <img src="gambar/rumah.jpg" alt="Gut Brain Connection" class="hero-article-bg">
 
-            <div class="hero-content">
-                <span class="badge-promo">🧪 Koleksi Sampel Rumah Tersedia</span>
-                <h1>Tes Laboratorium Profesional Sesuai Kenyamanan Anda</h1>
-                <p>Dapatkan hasil diagnostik akurat dari laboratorium bersertifikat. Pesan paket hari ini dan pilih
-                    antara kunjungan ke rumah sakit atau layanan pengambilan sampel di rumah premium kami.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-hero-primary">Pesan Tes dari Rumah &rarr;</a>
-                    <a href="#" class="btn-hero-primary">Lihat Semua Paket</a>
+            <div class="hero-overlay-content">
+                <span class="badge badge-nutrisi">Nutrisi & Sains</span>
+                <h1>Dampak Mikrobioma Usus terhadap Kesehatan Mental Modern</h1>
+                <p>Penelitian terbaru mengungkapkan bagaimana sistem pencernaan berkomunikasi langsung dengan otak,
+                    mempengaruhi suasana hati, tingkat kecemasan, dan kinerja kognitif.</p>
+                <div class="author-meta">
+                    <span>👤 Dr. Sarah Jenkins, PhD</span>
+                    <span>🕒 Waktu baca 12 menit</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- KATEGORI FILTER TABS -->
+        <div class="category-tabs">
+            <button class="tab-btn active">All Articles</button>
+            <button class="tab-btn">Nutrition</button>
+            <button class="tab-btn">Wellness</button>
+            <button class="tab-btn">Mental Health</button>
+            <button class="tab-btn">Fitness</button>
+            <button class="tab-btn">Medical Tech</button>
+        </div>
+
+        <!-- BARIS ARTIKEL KECIL (3 KOLOM GRID) -->
+        <section class="article-grid-triple">
+            <!-- Kartu 1: Ritual Pagi -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-yoga">
+                    <span class="badge badge-kesehatan">Kesehatan</span>
+
+                    <img src="gambar/yoga.jpg" alt="Yoga" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Ritual Pagi untuk Energi Berkelanjutan</h3>
+                    <p>Di luar kafein: Strategi ilmiah untuk menyelaraskan ritme sirkadian Anda demi performa puncak.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Dr. Michael Chen</span>
+                    <span>5 menit membaca</span>
+                </div>
+            </div>
+
+            <!-- Kartu 2: Makanan Super Anti-Inflamasi -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-salad">
+                    <span class="badge badge-nutrisi">Nutrisi</span>
+
+                    <img src="gambar/sehat.jpg" alt="Healthy Salad" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Makanan Super Anti-Inflamasi: Sebuah Panduan</h3>
+                    <p>Memahami biologi peradangan kronis dan bagaimana piring Anda bertindak sebagai obat pertama Anda.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Ahli Gizi Terdaftar Anita Rao</span>
+                    <span>8 menit membaca</span>
+                </div>
+            </div>
+
+            <!-- Kartu 3: Mengatasi Kecemasan -->
+            <div class="article-card">
+                <div class="card-thumb-placeholder thumb-forest">
+                    <span class="badge badge-mental">Kesehatan Mental</span>
+
+                    <img src="gambar/mental.jpg" alt="Forest" class="card-thumb-img">
+                </div>
+                <div class="card-body">
+                    <h3>Mengatasi Kecemasan di Era Digital</h3>
+                    <p>Kerangka kerja psikologis untuk mengelola stres akibat layar dan menetapkan batasan yang sehat.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>Oleh Dr. Elena Foster</span>
+                    <span>10 menit membaca</span>
                 </div>
             </div>
         </section>
 
-        <section class="recommendation-section">
-            <div class="section-header">
-                <div class="header-title">
-                    <h2>Paket Penayangan yang Direkomendasikan</h2>
-                    <p>Pemeriksaan kesehatan preventif yang disesuaikan dengan kebutuhan spesifik Anda.</p>
+        <!-- BARIS ARTIKEL TENGAH (2 KOLOM GRID ASIMETRIS) -->
+        <section class="article-grid-double">
+            <!-- Kiri: Artikel Lebar VO2 Max -->
+            <div class="horizontal-wide-card">
+                <div class="wide-card-img">
+                    <img src="gambar/lari.jpg" alt="Fitness Gym" class="wide-bg-img">
                 </div>
-                <div class="slider-arrows">
-                    <button class="arrow-btn">&lt;</button>
-                    <button class="arrow-btn">&gt;</button>
+                <div class="wide-card-info">
+                    <span class="badge badge-kebugaran">Kebugaran</span>
+                    <h3>Ilmu Pengetahuan tentang VO2 Max dan Umur Panjang</h3>
+                    <p>Temukan mengapa kebugaran kardiovaskular adalah biomarker terpenting untuk memprediksi rentang
+                        kesehatan jangka panjang dan bagaimana meningkatkannya secara efektif.</p>
+                    <div class="author-profile-row">
+                        <span class="avatar-circle">👨‍⚕️</span>
+                        <div>
+                            <strong>Dr. James Wilson</strong>
+                            <p>Kepala Kedokteran Olahraga</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="package-grid">
-                <div class="package-card card-featured">
-                    <div class="card-body">
-                        <div class="card-left-info">
-                            <span class="badge-populer">PALING POPULER</span>
-                            <h3>Tes Darah</h3>
-                            <p class="pack-desc">Evaluasi komprehensif terhadap kesehatan Anda secara keseluruhan,
-                                mendeteksi kondisi seperti anemia, infeksi, dan leukemia. Termasuk Hemoglobin, RBC, WBC,
-                                dan Trombosit.</p>
-                            <div class="meta-row">
-                                <div class="meta-col">
-                                    <strong>Perkiraan Hasil</strong>
-                                    <span>6-8 Jam</span>
-                                </div>
-                                <div class="meta-col">
-                                    <strong>Jenis Sampel</strong>
-                                    <span>Darah</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-right-img">
-                            <img src="gambar/TesDarah.jpg" alt="Blood Tube" class="card-img">
-                        </div>
-                    </div>
-                    <div class="card-footer-action">
-                        <span class="price">Rp 600.000</span>
-                        <button class="btn-book-outline">Book Test</button>
-                    </div>
-                </div>
-
-                <div class="package-card normal-card">
-                    <div class="card-top-thumb text-center">
-                        <img src="gambar/DiabetesScreening.jpg" alt="Blood Tube" class="card-img">
-                    </div>
-                    <div class="normal-card-content">
-                        <h3>Diabetes Screening</h3>
-                        <p>Tes HbA1c dan Tes Glukosa untuk memantau kadar gula darah Anda secara efektif.</p>
-                        <div class="card-bottom-action">
-                            <span class="price">Rp 500.000</span>
-                            <button class="btn-book-outline">Book</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="package-card normal-card">
-                    <div class="card-top-thumb text-center">
-                        <img src="gambar/KesehatanJantung.jpg" alt="Blood Tube" class="card-img">
-                    </div>
-                    <div class="normal-card-content">
-                        <h3>Kesehatan Jantung</h3>
-                        <p>Profil lipid yang mengukur Kolesterol (HDL, LDL) dan Trigliserida.</p>
-                        <div class="card-bottom-action">
-                            <span class="price">Rp 1.000.000</span>
-                            <button class="btn-book-outline">Book</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- Kanan: Artikel Info Wearable Tech -->
+            <div class="text-info-card">
+                <div class="icon-header-red">🔬</div>
+                <h3>Teknologi yang Dapat Dipakai: Akurasi vs. Kegunaan</h3>
+                <p>Apakah metrik pelacakan tidur Anda benar-benar dapat diandalkan? Perbandingan klinis perangkat
+                    konsumen teratas.</p>
+                <a href="#" class="link-dive-deep">Baca Menyelam Lebih Dalam <span class="arrow">&rarr;</span></a>
             </div>
         </section>
 
-        <section class="home-service-section">
-            <div class="home-service-left">
-                <h2>Layanan Rumah MediCare</h2>
-                <p class="subtitle">Lewati antrean dan perjalanan. Para profesional kesehatan bersertifikat kami akan
-                    datang ke tempat Anda, memastikan proses pengambilan sampel yang aman dan nyaman di privasi rumah
-                    Anda.</p>
-
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <span class="icon-check">✓</span>
-                        <div>
-                            <h4>Ahli Phlebotomi Bersertifikat</h4>
-                            <p>Staf yang terlatih dengan baik dan mengikuti protokol kebersihan yang ketat.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="icon-check">🔄</span>
-                        <div>
-                            <h4>Hasil Digital di Hari yang Sama</h4>
-                            <p>Akses laporan Anda langsung melalui aplikasi atau portal VitalCare.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="icon-check">🛡️</span>
-                        <div>
-                            <h4>Privasi Terjamin</h4>
-                            <p>Data medis Anda dienkripsi dan ditangani dengan kerahasiaan penuh.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- NEWSLETTER SUBSCRIBE BANNER -->
+        <section class="newsletter-banner">
+            <div class="newsletter-text">
+                <h2>Tetap Terinformasi dengan Artikel MediCare</h2>
+                <p>Dapatkan wawasan tingkat medis dan kiat kesehatan yang dikirimkan ke kotak masuk Anda setiap Selasa.
+                </p>
             </div>
-            <div class="home-service-right">
-                <div class="service-image-box">
-                    <img src="gambar/tenkess.jpg" alt="Foto Tas Medis / Tenaga Kesehatan">
-                </div>
-            </div>
-        </section>
-
-        <section class="map-section">
-            <div class="map-header">
-                <h2>Temukan Laboratorium Terdekat di Lokasi Anda</h2>
-                <p>Lebih suka mengunjungi kami? Kami memiliki lebih dari 50 laboratorium mitra terakreditasi di seluruh
-                    negeri.</p>
-            </div>
-
-            <div class="map-workspace">
-                <div class="location-sidebar">
-                    <div class="location-card active-location">
-                        <h4>Laboratorium Pusat MediCare</h4>
-                        <p>123 Health Blvd, Pusat Kota</p>
-                        <span class="status-open">🕒 Buka 24/7</span>
-                    </div>
-                    <div class="location-card">
-                        <h4>Diagnostik Distrik Utara</h4>
-                        <p>Jalan Taman Medis 45</p>
-                        <span class="status-time">08:00 - 21:00</span>
-                    </div>
-                    <div class="location-card">
-                        <h4>Pusat Kebugaran Sisi Timur</h4>
-                        <p>88 Heritage Square</p>
-                        <span class="status-time">07:30 - 20:00</span>
-                    </div>
-                </div>
-
-                <div class="map-view-placeholder">
-                    <img src="gambar/gmaps.jpg" alt="Peta Lokasi" class="map-bg-img">
-                    <div class="map-actions-overlay">
-                        <button class="btn-direction-detail">Dapatkan Petunjuk Arah</button>
-                        <button class="btn-direction-detail">Lihat Detail</button>
-                    </div>
-                </div>
-            </div>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Masukkan alamat email Anda" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
         </section>
 
     </div>
