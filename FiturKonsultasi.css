@@ -1,0 +1,538 @@
+:root {
+    --primary-blue: #0955A1;
+    --text-dark: #0B1C30;
+    --text-muted: #949597;
+    --green-accent: #65B32C;
+    --green-hover: #65B32C;
+    --green-light: #e8f5e9;
+    --border-color: #0955A1;
+    --card-bg: #FDFFFE;
+    --bg-light: #ECF5FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f6fc;
+    /* Biru muda soft transparan sesuai mockup */
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* NAVBAR & FOOTER */
+.navbar {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--card-bg);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 15px 8px 38px;
+    border-radius: 20px;
+    border: none;
+    width: 260px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-container i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.btn-bantuan {
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-profil {
+    background-color: var(--green-accent);
+    color: var(--card-bg);
+    padding: 6px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-profil:hover {
+    background-color: #62a31f;
+    color: var(--card-bg);
+}
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--card-bg);
+    padding: 40px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    max-width: 420px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-bg);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   MAIN LAYOUT & CARDS (Sesuai Gambar Konsultasi.png)
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.konsultasi-header {
+    margin-bottom: 25px;
+}
+
+.konsultasi-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b3a70;
+    /* Biru tua gelap */
+    margin-bottom: 4px;
+}
+
+.konsultasi-header p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.konsultasi-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.content-left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Kotak Filter Pencarian Dokter */
+.search-specialist-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.inner-input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.inner-input-wrapper input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.inner-input-wrapper .stethoscope-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.btn-search-doctor {
+    background-color: transparent;
+    color: #0955A1;
+    border: 1px solid var(--primary-blue);
+    padding: 0 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-search-doctor:hover {
+    color: #FDFFFE;
+    background-color: #0955A1;
+}
+
+/* Tags Kategori */
+.popular-tags .tags-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 0.8px;
+}
+
+.tags-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag:hover {
+    background-color: #e2f0fd;
+    color: var(--primary-blue);
+}
+
+.tag.active {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+    font-weight: 600;
+}
+
+/* Grid Tiga Kolom */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.doctor-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Mengatur bagian atas agar foto dan teks berjejer ke samping (Row), bukan menumpuk */
+.card-top {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    /* Memastikan sejajar horizontal */
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+/* Kotak Foto/Avatar Dokter */
+.avatar-box {
+    width: 64px;
+    height: 64px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    /* Sudut sedikit melengkung sesuai gambar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    /* Mencegah foto menciut */
+    overflow: hidden;
+}
+
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-row h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.rating {
+    color: #eab308;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.specialty {
+    color: #0b56a4;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.experience {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Bagian Bawah Kartu */
+.card-bottom {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #ffffff;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    display: block;
+    font-weight: 600;
+}
+
+.price-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-badge.available {
+    background-color: var(--green-light);
+    color: var(--green-hover);
+}
+
+.status-badge.schedule {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+}
+
+.action-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-bookchat {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-bookchat:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+}
+
+/* Pagination */
+.pagination-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-more {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px 24px;
+    border-radius: 8px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   SIDEBAR RIGHT STYLE
+   ========================================================================== */
+.sidebar-right {
+    flex: 1;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.sidebar-right h3 {
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    font-size: 13px;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    background-color: #fff;
+}
+
+.filter-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.rating-indicator {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-top: 4px;
+}
