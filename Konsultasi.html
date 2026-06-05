@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediCare - Konsultasi</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="FiturKonsultasi.css">
+    </head>
+</head>
+
+<body>
+
+    <!-- NAVBAR UTAMA -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">MediCare</div>
+            <ul class="nav-links">
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Konsultasi.html" class="active">Layanan</a></li>
+                <li><a href="TokoObat.html">Toko</a></li>
+                <li><a href="JadwalDokter.html">Dokter</a></li>
+                <li><a href="About.html">Tentang</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
+            </div>
+            <a href="#" class="btn-bantuan">Bantuan</a>
+            <a href="Profile.html" class="btn-profil">Profil</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="konsultasi-header">
+            <h2>Temukan Spesialis Anda</h2>
+            <p>Berkonsultasilah dengan dokter-dokter ternama demi kenyamanan rumah Anda.</p>
+        </div>
+
+        <div class="konsultasi-layout">
+
+            <div class="content-left">
+
+                <div class="search-specialist-box">
+                    <div class="input-row">
+                        <div class="inner-input-wrapper">
+                            <span class="stethoscope-icon">🩺</span>
+                            <input type="text" placeholder="Spesialisasi (misalnya, Kardiologi, Dokter Anak)">
+                        </div>
+                        <button type="button" class="btn-search-doctor">🔍 Cari Dokter</button>
+                    </div>
+                    <div class="popular-tags">
+                        <span class="tags-label">SPESIALITAS POPULER</span>
+                        <div class="tags-group">
+                            <span class="tag active">Dokter Umum</span>
+                            <span class="tag">Kardiologi</span>
+                            <span class="tag">Pediatri</span>
+                            <span class="tag">Dermatologi</span>
+                            <span class="tag">Neurologi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-grid">
+
+                    <div class="doctor-card">
+                        <div class="card-top">
+                            <div class="avatar-box">
+                                <img src="/gambar/Sarah.jpg">
+                            </div>
+                            <div class="doctor-meta">
+                                <div class="name-row">
+                                    <h4>Dr. Sarah Amanda</h4>
+                                    <span class="rating">★ 4.9</span>
+                                </div>
+                                <p class="specialty">Ahli Jantung Senior</p>
+                                <p class="experience">💼 Pengalaman 12 Tahun.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price-row">
+                                <div class="price-info">
+                                    <span class="price-label">BIAYA KONSULTASI</span>
+                                    <span class="price-value">Rp 250.000</span>
+                                </div>
+                                <span class="status-badge available">Tersedia Hari Ini</span>
+                            </div>
+                            <div class="action-row">
+                                <button class="btn-bookchat">💬 Chat</button>
+                                <button class="btn-bookchat">Buku Panduan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="card-top">
+                            <div class="avatar-box">
+                                <img src="/gambar/Michael.jpg">
+                            </div>
+                            <div class="doctor-meta">
+                                <div class="name-row">
+                                    <h4>Dr. Michael Putra</h4>
+                                    <span class="rating">★ 4.8</span>
+                                </div>
+                                <p class="specialty">Spesialis Anak</p>
+                                <p class="experience">💼 Pengalaman 8 Tahun.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price-row">
+                                <div class="price-info">
+                                    <span class="price-label">BIAYA KONSULTASI</span>
+                                    <span class="price-value">Rp 180.000</span>
+                                </div>
+                                <span class="status-badge schedule">Berikutnya: Senin, 09:00</span>
+                            </div>
+                            <div class="action-row">
+                                <button class="btn-bookchat">💬 Chat</button>
+                                <button class="btn-bookchat">Buku Panduan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="card-top">
+                            <div class="avatar-box">
+                                <img src="/gambar/Elena.jpg">
+                            </div>
+                            <div class="doctor-meta">
+                                <div class="name-row">
+                                    <h4>Dr. Elena Rose</h4>
+                                    <span class="rating">★ 5.0</span>
+                                </div>
+                                <p class="specialty">Dermatologi</p>
+                                <p class="experience">💼 Pengalaman 15 Tahun.</p>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="price-row">
+                                <div class="price-info">
+                                    <span class="price-label">BIAYA KONSULTASI</span>
+                                    <span class="price-value">Rp 300.000</span>
+                                </div>
+                                <span class="status-badge available">Tersedia Hari Ini</span>
+                            </div>
+                            <div class="action-row">
+                                <button class="btn-bookchat">💬 Chat</button>
+                                <button class="btn-bookchat">Buku Panduan</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pagination-container">
+                    <button class="btn-more">Lihat Spesialis Lainnya <span class="arrow-down">▼</span></button>
+                </div>
+
+            </div>
+
+            <aside class="sidebar-right">
+                <h3>Sempurnakan Hasil</h3>
+
+                <div class="filter-group">
+                    <label>Tersedianya</label>
+                    <select>
+                        <option>Tersedia Hari Ini</option>
+                        <option>Besok</option>
+                        <option>Minggu Ini</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Peringkat Minimum</label>
+                    <input type="range" min="1" max="5" step="0.1" value="4.5">
+                    <div class="rating-indicator">4.5+</div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER UTAMA -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h2>MediCare</h2>
+                <p>Layanan kesehatan digital yang lebih mudah diakses, terjangkau, dan berkualitas tinggi untuk semua
+                    orang.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fa-solid fa-phone"></i></a>
+                <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
+        </div>
+    </footer>
+
+</body>
+
+</html>
