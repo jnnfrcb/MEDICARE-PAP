@@ -4,200 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare - Dashboard</title>
+    <title>MediCare - Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TidakLogin.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo">MediCare</div>
-            <ul class="nav-links">
-                <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="#">Layanan</a></li>
-                <li><a href="#">Toko</a></li>
-                <li><a href="#">Dokter</a></li>
-                <li><a href="About.html">Tentang</a></li>
-            </ul>
         </div>
         <div class="nav-right">
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Dokter, Rumah Sakit, atau Obat">
-            </div>
             <a href="#" class="btn-bantuan">Bantuan</a>
-            <a href="Profile.html" class="btn-profil">Profil</a>
+            <a href="Login.html" class="btn-profil">Masuk</a>
         </div>
     </nav>
-    <!-- Navbar Selesai -->
 
+    <main class="container">
 
-<!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <span class="tag">Sistem Kesehatan Terpercaya</span>
-
-            <h1>Kesehatan Anda,<br>Prioritas Kami</h1>
-
-            <p>
-                Akses layanan medis profesional langsung dari kenyamanan rumah Anda.
-                Konsultasi instan dengan spesialis terbaik dan pengiriman obat 24/7.
-            </p>
-
-            <div class="hero-buttons">
-                <button class="btn-green">Konsultasi dengan Dokter</button>
-                <button class="btn-outline">Cara Kerjanya</button>
+        <section class="lp-hero">
+            <div class="lp-hero-content">
+                <span class="lp-hero-tag">Sistem Kesehatan Terpercaya</span>
+                <h1>Kesehatan Anda,<br>Prioritas Kami</h1>
+                <p>Akses layanan medis profesional langsung dari kenyamanan rumah Anda. Konsultasi instan dengan
+                    spesialis terbaik dan pengiriman obat 24/7.</p>
+                <div class="lp-hero-btns">
+                    <a href="Login.html" class="btn-green-fill"><i class="fa-regular fa-comments"
+                            style="margin-right:8px;"></i>Konsultasi dengan Dokter</a>
+                    <a href="#" class="btn-blue-outline">Cara Kerjanya</a>
+                </div>
             </div>
-        </div>
+            <img src="/Project PAP/Project PAP/gambar/DokterUtama.jpg" alt="Dokter Utama" class="lp-hero-img">
+        </section>
 
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800"
-                alt="Doctor">
-        </div>
-    </section>
-
-    <hr>
-
-    <!-- Features -->
-    <section class="features">
-
-        <h2>Kenapa Mempercayai Medicare?</h2>
-        <p class="subtitle">
-            Kami mengintegrasikan teknologi terdepan dengan keahlian medis manusia.
-        </p>
-
-        <div class="feature-grid">
-
-            <div class="card large">
-                <h3>Akses 24/7 Tanpa Batas</h3>
-                <p>
-                    Konsultasi kapan saja tanpa perlu menunggu.
-                    Dokter kami siap membantu sepanjang hari.
-                </p>
+        <section>
+            <div class="lp-section-title">
+                <h2>Kenapa Mempercayai Namanya?</h2>
+                <p>Kami mengintegrasikan teknologi terdepan dengan keahlian medis manusia untuk memberikan perawatan
+                    terbaik bagi Anda.</p>
             </div>
-
-            <div class="card blue">
-                <h3>Keahlian Spesialis</h3>
-                <p>
-                    Terhubung dengan jaringan dokter spesialis terbaik
-                    dari seluruh Indonesia.
-                </p>
+            <div class="lp-grid-2x2" style="margin-top: 25px;">
+                <div class="lp-card">
+                    <div class="lp-icon-circle"><i class="fa-regular fa-clock"></i></div>
+                    <h3>Akses 24/7 Tanpa Batas</h3>
+                    <p>Kesehatan tidak mengenal waktu. Itulah mengapa platform kami tersedia setiap saat, baik itu
+                        tengah malam atau hari libur, dokter kami selalu siap.</p>
+                </div>
+                <div class="lp-card blue-fill">
+                    <div class="lp-icon-circle"><i class="fa-solid fa-users"></i></div>
+                    <h3>Keahlian Spesialis</h3>
+                    <p>Terhubung dengan jaringan dokter spesialis bersertifikat dari rumah sakit ternama di seluruh
+                        negeri.</p>
+                    <div class="badge-container">
+                        <span class="badge-promo">Kardiologi</span>
+                        <span class="badge-promo">Pediatri</span>
+                        <span class="badge-promo">Akupunktur</span>
+                    </div>
+                </div>
+                <div class="lp-card">
+                    <div class="lp-icon-circle"><i class="fa-solid fa-truck"></i></div>
+                    <h3>Pengiriman Rumah</h3>
+                    <p>Obat resep diantarkan langsung ke pintu Anda dalam waktu kurang dari 60 menit dengan keamanan
+                        terjaga.</p>
+                </div>
+                <div class="lp-card">
+                    <div class="lp-icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Keamanan Data Terjamin</h3>
+                    <p>Enkripsi tingkat militer untuk melindungi seluruh riwayat medis dan privasi data pribadi Anda.
+                    </p>
+                    <a href="#">Pelajari tentang keamanan kami <i class="fa-solid fa-arrow-right"
+                            style="font-size:11px;"></i></a>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>Home Delivery</h3>
-                <p>
-                    Obat dikirim langsung ke rumah dengan aman dan cepat.
-                </p>
+        <section>
+            <div class="lp-section-title">
+                <h2>Three Simple Steps to Care</h2>
+                <p>Memulai perjalanan kesehatan Anda tidak pernah semudah ini. Hanya butuh beberapa menit untuk
+                    mendapatkan bantuan.</p>
             </div>
-
-            <div class="card">
-                <h3>Keamanan Data Terjamin</h3>
-                <p>
-                    Riwayat medis dan privasi pasien dilindungi dengan
-                    standar keamanan tinggi.
-                </p>
+            <div class="lp-steps-container" style="margin-top:25px;">
+                <div class="lp-step">
+                    <div class="lp-step-num">1</div>
+                    <h4>Pilih Layanan</h4>
+                    <p>Pilih dari telekonsultasi, kunjungan rumah, atau penebusan resep obat.</p>
+                </div>
+                <div class="lp-step">
+                    <div class="lp-step-num">2</div>
+                    <h4>Konsultasi</h4>
+                    <p>Bicara dengan dokter berlisensi melalui video call atau chat instan.</p>
+                </div>
+                <div class="lp-step">
+                    <div class="lp-step-num">3</div>
+                    <h4>Dapatkan Solusi</h4>
+                    <p>Terima diagnosis, resep digital, dan rencana perawatan yang dipersonalisasi.</p>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <hr>
-
-    <!-- Steps -->
-    <section class="steps">
-
-        <h2>Three Simple Steps to Care</h2>
-
-        <div class="step-container">
-
-            <div class="step">
-                <span>1</span>
-                <h4>Pilih Layanan</h4>
-                <p>Pilih jenis konsultasi atau kebutuhan medis Anda.</p>
+        <section>
+            <div class="lp-section-title">
+                <h2>Mendengar dari Pasien Kami</h2>
+                <p>Ribuan orang telah mempercayakan kesehatan mereka kepada tim ahli medis kami.</p>
             </div>
-
-            <div class="step">
-                <span>2</span>
-                <h4>Konsultasi</h4>
-                <p>Berbicara langsung dengan dokter melalui chat atau video.</p>
+            <div class="lp-reviews-grid" style="margin-top:25px;">
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p class="review-text">"Pengalaman yang luar biasa. Saya bisa berkonsultasi dengan dokter kulit
+                        hanya dalam 5 menit tanpa harus mengantre di rumah sakit. Sangat praktis!"</p>
+                    <div class="reviewer-info">
+                        <img src="/Project PAP/Project PAP/gambar/irene.jpg" alt="Anita" class="reviewer-img">
+                        <div class="reviewer-details">
+                            <h5>Anita Wijaya</h5>
+                            <span>Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p class="review-text">"Layanan pengiriman obatnya sangat cepat. Sangat membantu ketika saya sedang
+                        tidak enak badan dan tidak bisa keluar rumah."</p>
+                    <div class="reviewer-info">
+                        <img src="/Project PAP/Project PAP/gambar/mingyu.jpg" alt="Budi" class="reviewer-img">
+                        <div class="reviewer-details">
+                            <h5>Budi Santoso</h5>
+                            <span>Pegawai Swasta</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p class="review-text">"Dokter sangat ramah dan memberikan penjelasan yang sangat detail. Saya
+                        merasa benar-benar didengarkan dan diperhatikan."</p>
+                    <div class="reviewer-info">
+                        <img src="/Project PAP/Project PAP/gambar/kucing.jpga" alt="Siska" class="reviewer-img">
+                        <div class="reviewer-details">
+                            <h5>Siska Pratama</h5>
+                            <span>Teacher</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="step">
-                <span>3</span>
-                <h4>Dapatkan Solusi</h4>
-                <p>Terima diagnosis dan rekomendasi perawatan.</p>
+        <section class="lp-cta-box">
+            <h2>Siap untuk Prioritaskan Kesehatan Anda?</h2>
+            <p>Bergabunglah dengan ribuan pengguna lain yang telah bertransformasi bersama layanan kesehatan modern
+                VitalCare.</p>
+            <div class="cta-buttons">
+                <a href="Login.html" class="btn-transparent-outline">Daftar Sekarang</a>
+                <a href="Login.html" class="btn-transparent-outline">Lihat Jadwal Dokter</a>
             </div>
+        </section>
 
-        </div>
+    </main>
 
-    </section>
-
-    <hr>
-
-    <!-- Testimoni -->
-    <section class="testimonial">
-
-        <h2>Mendengar dari Pasien Kami</h2>
-
-        <div class="testimonial-grid">
-
-            <div class="review">
-                <h3>★★★★★</h3>
-                <p>
-                    Pelayanan sangat membantu dan cepat.
-                </p>
-
-                <strong>Anita Wijaya</strong>
-            </div>
-
-            <div class="review">
-                <h3>★★★★★</h3>
-                <p>
-                    Dokternya ramah dan memberikan solusi yang jelas.
-                </p>
-
-                <strong>Budi Santoso</strong>
-            </div>
-
-            <div class="review">
-                <h3>★★★★★</h3>
-                <p>
-                    Sangat mudah digunakan dan responsif.
-                </p>
-
-                <strong>Riska Pratama</strong>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-
-        <h2>Siap untuk Prioritaskan Kesehatan Anda?</h2>
-
-        <p>
-            Bergabunglah dengan ribuan pengguna yang telah merasakan
-            manfaat layanan kesehatan modern.
-        </p>
-
-        <div class="cta-buttons">
-            <button class="btn-white">Daftar Sekarang</button>
-            <button class="btn-outline-white">Lihat Jadwal Dokter</button>
-        </div>
-
-    </section>
-
-
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-info">
@@ -215,4 +187,7 @@
             &copy; 2026 <strong>MediCare</strong> Sistem Kesehatan. Seluruh hak dilindungi undang-undang.
         </div>
     </footer>
-    <!-- FOOTER SELESAI -->
+
+</body>
+
+</html>
